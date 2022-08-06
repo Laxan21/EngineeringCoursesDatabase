@@ -54,8 +54,9 @@ FROM engineering_courses
 WHERE Prerequisites != 'None'
 ORDER BY CourseCode
 
-/* Finding courses that mechanical engineering students take */
-SELECT COUNT(*)  FROM engineering_courses
+/* Finding the amount of courses that mechanical engineering students take */
+SELECT COUNT(*) as num_of_courses
+FROM engineering_courses
 WHERE Discipline LIKE '%Mechanical%'
 OR Discipline = 'ALL'
 
