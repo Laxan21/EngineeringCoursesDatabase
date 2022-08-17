@@ -48,13 +48,13 @@ SELECT CourseCode
 FROM engineering_courses 
 WHERE Discipline = 'ALL'
 
-/* Ordering Courses where there are prerequisites */
+/* ordering Courses where there are prerequisites */
 SELECT CourseCode, Prerequisites
 FROM engineering_courses
 WHERE Prerequisites != 'None'
 ORDER BY CourseCode
 
-/* Finding the amount of courses that mechanical engineering students take */
+/* finding the amount of courses that mechanical engineering students take */
 SELECT COUNT(*) as num_of_courses
 FROM engineering_courses
 WHERE Discipline LIKE '%Mechanical%'
