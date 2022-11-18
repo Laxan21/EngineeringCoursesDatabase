@@ -5,8 +5,10 @@ Created a database of First Year Engineering Courses
 Below are screenshots of the SQL queries
 
 First Query - table data:
-
-
+```
+SELECT *
+FROM engineering_courses
+```
 ![Query1](https://user-images.githubusercontent.com/104281046/183228563-88d4ff76-0a82-44c0-bfb4-bf5b42e759d2.png)
 
 Second Query - data where all disciplines take same courses:
