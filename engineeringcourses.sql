@@ -1,7 +1,8 @@
 -- initial code to create table 
 CREATE table engineering_courses 
 (ID int NOT NULL auto_increment PRIMARY KEY, 
-CourseCode varchar(10), Name varchar(100),
+CourseCode varchar(10), 
+Name varchar(100),
 Department varchar(50), 
 Discipline varchar(500), 
 Year varchar(20), 
