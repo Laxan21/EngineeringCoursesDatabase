@@ -8,10 +8,6 @@ Discipline varchar(500),
 Year varchar(20), 
 Prerequisites varchar(100));
 
--- Select statement used to view the table
-SELECT * FROM engineering_courses;
-
-
 -- inserted values are all 1st year engineering courses 
 INSERT INTO engineering_courses(CourseCode,Name,Department,Discipline,Year,Prerequisites)
 VALUES
@@ -41,6 +37,7 @@ WHERE ID = 4
 
 -- Example Queries 
 
+-- Select statement used to view the table
 SELECT *
 FROM engineering_courses
 
