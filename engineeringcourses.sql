@@ -1,4 +1,4 @@
-/* initial code to create table */
+-- initial code to create table 
 CREATE table engineering_courses 
 (ID int NOT NULL auto_increment PRIMARY KEY, 
 CourseCode varchar(10), Name varchar(100),
@@ -7,11 +7,11 @@ Discipline varchar(500),
 Year varchar(20), 
 Prerequisites varchar(100));
 
-/* Select statement used to view the table*/
+-- Select statement used to view the table*/
 SELECT * FROM engineering_courses;
 
 
-/* inserted values are all 1st year engineering courses */
+-- inserted values are all 1st year engineering courses */
 INSERT INTO engineering_courses(CourseCode,Name,Department,Discipline,Year,Prerequisites)
 VALUES
 ('CEN 100', 'Introduction to Engineering','Common Engineering','All','1','None'),
@@ -33,34 +33,34 @@ VALUES
 ('CVL 207','Graphics','Civil Engineering','Civil','1','None'),
 ('MEC 222','Engineering Graphical Communication','Mechanical Engineering','Mechanical,Industrial','1','None');
 
-/* error of course name: Linear ALgebra */
+-- error of course name: Linear ALgebra 
 UPDATE engineering_courses
 SET Name = 'Linear Algebra'
 WHERE ID = 4
 
-/* Example Queries */
+-- Example Queries 
 
 SELECT *
 FROM engineering_courses
 
-/* looking at data where all disciplines take same courses */
+-- looking at data where all disciplines take same courses 
 SELECT CourseCode
 FROM engineering_courses 
 WHERE Discipline = 'ALL'
 
-/* ordering Courses where there are prerequisites */
+-- ordering Courses where there are prerequisites
 SELECT CourseCode, Prerequisites
 FROM engineering_courses
 WHERE Prerequisites != 'None'
 ORDER BY CourseCode
 
-/* finding the amount of courses that mechanical engineering students take */
+-- finding the amount of courses that mechanical engineering students take 
 SELECT COUNT(*) as num_of_courses
 FROM engineering_courses
 WHERE Discipline LIKE '%Mechanical%'
 OR Discipline = 'ALL'
 
-/* comparing the departments that have the most courses */
+-- comparing the departments that have the most courses 
 SELECT Department,Count(*) as num_of_courses 
 FROM engineering_courses 
 GROUP BY Department 
