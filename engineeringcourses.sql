@@ -8,11 +8,11 @@ Discipline varchar(500),
 Year varchar(20), 
 Prerequisites varchar(100));
 
--- Select statement used to view the table*/
+-- Select statement used to view the table
 SELECT * FROM engineering_courses;
 
 
--- inserted values are all 1st year engineering courses */
+-- inserted values are all 1st year engineering courses 
 INSERT INTO engineering_courses(CourseCode,Name,Department,Discipline,Year,Prerequisites)
 VALUES
 ('CEN 100', 'Introduction to Engineering','Common Engineering','All','1','None'),
@@ -49,7 +49,7 @@ SELECT CourseCode
 FROM engineering_courses 
 WHERE Discipline = 'ALL'
 
--- ordering Courses where there are prerequisites
+-- ordering courses where there are prerequisites
 SELECT CourseCode, Prerequisites
 FROM engineering_courses
 WHERE Prerequisites != 'None'
