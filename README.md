@@ -38,6 +38,12 @@ VALUES
 ('MEC 222','Engineering Graphical Communication','Mechanical Engineering','Mechanical,Industrial','1','None');
 ```
 
+Error "Linear ALgebra": Updated course name to Linear Algebra 
+```
+UPDATE engineering_courses
+SET Name = 'Linear Algebra'
+WHERE ID = 4
+```
 
 Below are screenshots of the SQL queries
 
